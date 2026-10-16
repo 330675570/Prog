@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,Input} from '@angular/core';
 
 @Component({
   imports: [],
@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
 })
 export class Contact {
 
-  
+  @Input() name:string |undefined
+  @Input() email:string |undefined
+  @Input() phone:string |undefined
+  @Input() birthofdate:Date |undefined
 }

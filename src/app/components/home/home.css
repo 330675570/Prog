@@ -489,4 +489,10 @@ body {
   .composer-actions {
     flex-wrap: wrap;
   }
+  .title{
+    background-color: red;
+    text-align: center;
+    font-size: 100px;
+    border-radius: 15px;
+  }
 }
