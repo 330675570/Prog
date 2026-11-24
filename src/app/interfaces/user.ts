@@ -8,6 +8,4 @@ export interface User {
     Phone:string,
     Addres?:string,
     Statuss: Status
-
-
 }

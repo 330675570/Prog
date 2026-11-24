@@ -1,5 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HttpService } from './services/httpService';
+
 
 @Component({
   selector: 'app-root',
@@ -9,4 +11,21 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('Prog');
+  constructor(private httpService: HttpService) { }
+
+ 
+  ngOnInit() {
+    this.getFromServer();
+  }
+
+  getFromServer() {
+
+    this.httpService.getFromServer().subscribe((data) => {
+      console.log(data);
+      console.log('bbb');
+    });
+    console.log('aaa');
+    
+
+  }
 }

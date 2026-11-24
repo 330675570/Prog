@@ -9,8 +9,8 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './home.css'
 })
 export class HomeComponent {
-constructor(private router:Router){}
-goToContact():void{
-  this.router.navigate(['/contact']);
-}
+  constructor(private router: Router) { }
+  goToContact(): void {
+    this.router.navigate(['/contact']);
+  }
 }

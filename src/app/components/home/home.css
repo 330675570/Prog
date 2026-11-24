@@ -496,3 +496,57 @@ body {
     border-radius: 15px;
   }
 }
+:host {
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7ff, #e6edff);
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  color: #1e2a4a;
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+button {
+  padding: 0.85rem 1.75rem;
+  border: 0;
+  border-radius: 0.75rem;
+  background: #4263eb;
+  color: #fff;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+button:hover {
+  background: #364fc7;
+  box-shadow: 0 0.5rem 1.25rem rgb(66 99 235 / 25%);
+  transform: translateY(-2px);
+}
+
+button:focus-visible {
+  outline: 3px solid #1e2a4a;
+  outline-offset: 4px;
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none;
+  }
+}
